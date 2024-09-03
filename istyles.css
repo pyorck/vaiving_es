@@ -1,0 +1,232 @@
+body {
+            font-family: Geneva, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the logo */
+        .logo {
+            display: block;
+            margin: 0px auto; /* Centers the logo horizontally with some margin */
+            max-width: 800px;  /* Adjust this value to change the logo size */
+            height: auto;      /* Keeps the aspect ratio */
+            margin-bottom: 3px; /* Spacing below */
+            margin-top: 3px; /* Spacing top */
+                    
+        }
+
+        /* Styling for the separator line */
+        .separator {
+            width: 80%; /* Adjust the width of the line */
+            max-width: 800px; /* Optional: limits the max-width */
+            height: 4px; /* Thickness of the line */
+            background-color: black; /* Color of the line */
+            margin: 20px auto; /* Centers the line horizontally */
+            margin-bottom: 5px; /* Spacing below the Separator */
+            margin-top: 5px; /* Spacing below the Separator */
+        }
+
+        /* Styling for the rest of the page content */
+        
+        h1 {
+            color: #000000;
+            font-size: 54px; /* Adjust the size as needed */
+            margin-top: 10px; /* Spacing over the h1 */
+            margin-bottom: 10px; /* Spacing below the h1 */
+        }
+
+        p {
+            color: #000000;
+            font-size: 32px; /* Adjust the size as needed */
+            margin-top: 5px; /* Spacing over the p */
+            margin-bottom: 25px; /* Spacing below the p */
+        }
+
+        .form-container {
+            background-color: #DFDFDF;
+            width: 100%;
+            margin: 0 auto; /* Center container horizontally */
+            margin-bottom: 20px
+        }
+        
+        #subscribe-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center; /* Center-aligns form elements horizontally */
+        }
+        
+        input[type="email"] {
+            text-align: center; /* Center-align the text inside the input field */
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            max-width: 340px; /* Optional: limit max width for better alignment */
+            box-sizing: border-box;
+            transition: background-color 0.8s ease; /* Smooth transition for hover effects */
+        }
+
+        /* Hover effect for the email input field */
+        input[type="email"]:hover {
+            border-color: #000000; /* Change the border color on hover */
+            background-color: #fff583; /* Change the background color on hover */
+        }
+        
+        button {
+            padding: 10px;
+            border: 3px solid #000000;
+            border-radius: 4px;
+            background-color: #ffe800;
+            color: #000000;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.8s ease;
+            width: 100%; /* Make the button the same width as the input */
+            max-width: 250px; /* Optional: limit max width for consistency */
+        }
+        
+        button:hover {
+            background-color: #fff583;
+        }
+        
+        #form-response {
+            margin-top: 10px;
+            color: #28a745; /* Green color for success message */
+            font-size: 14px;
+            text-align: center; /* Center-aligns response message */
+        }
+
+        .button-link {
+            display: inline-block;   /* Makes the link behave like a button */
+            padding: 10px 20px;      /* Adds space inside the button */
+            background-color: #000000; /* Button background color (LinkedIn Blue) */
+            color: white;            /* Button text color */
+            text-align: center;      /* Centers text inside the button */
+            text-decoration: none;   /* Removes underline from the link */
+            border-radius: 5px;      /* Rounds the corners of the button */
+            font-size: 16px;         /* Font size */
+        }
+
+        .button-link:hover {
+            background-color: #b5e4ff; /* Changes color on hover */
+        }
+
+        .button-link2 {
+            display: inline-block;   /* Makes the link behave like a button */
+            padding: 10px 20px;      /* Adds space inside the button */
+            background-color: #000000; /* Button background color (LinkedIn Blue) */
+            color: white;            /* Button text color */
+            text-align: center;      /* Centers text inside the button */
+            text-decoration: none;   /* Removes underline from the link */
+            border-radius: 5px;      /* Rounds the corners of the button */
+            font-size: 16px;         /* Font size */
+        }
+
+        .button-link2:hover {
+            background-color: #ffc964; /* Changes color on hover */
+        }
+
+            .site-header {
+                        
+            background-color: #FFFFFF; /* Header background color */
+            color: black;              /* Header text color */
+            padding: 20px; /* Space around content */
+            text-align: center; /* Center the header content */
+            position: relative; /* Required for box-shadow to appear */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Shadow effect */
+            z-index: 1; /* Ensures header appears above main */
+            margin-top: -8px;
+            margin-bottom: -8px;
+                        
+            }
+            
+            .site-footer {
+                        
+            background-color: #000000; /* Header background color (LinkedIn Blue) */
+            color: white;              /* Header text color */
+            padding: 20px;             /* Padding around header content */
+            text-align: center;        /* Center the text inside the header */
+                        
+            }
+
+            .site-main {
+                        
+            background-color: #DFDFDF; /* Header background color (LinkedIn Blue) */
+            color: black;              /* Header text color */
+            padding: 20px;             /* Padding around header content */
+            text-align: center;        /* Center the text inside the header */
+                        
+            }
+
+            .top-section {
+
+            background-color: #000000; /* Header background color (LinkedIn Blue) */
+            color: white;              /* Header text color */
+            padding: 20px;             /* Padding around header content */
+            text-align: center;        /* Center the text inside the header */
+            height: 10px;
+            display: flex; /* Flexbox layout */
+            align-items: center; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+            overflow: hidden; /* Hide any overflow */
+            position: relative; /* Position relative for absolute positioning inside */
+
+            }
+
+            .scrolling-text {
+            color: white; /* Text color */
+            white-space: nowrap; /* Prevent text from wrapping */
+            position: absolute; /* Absolute positioning for the scrolling effect */
+            animation: scroll-left 20s linear infinite; /* Animation for scrolling */
+                        
+            }
+            
+            /* Keyframes for the scrolling effect */
+            @keyframes scroll-left {
+                0% {
+                    transform: translateX(100%); /* Start off the right side */
+                }
+                100% {
+                    transform: translateX(-100%); /* Move to the left side */
+                }
+            }
+
+        /* Media Query for Mobile Website */
+
+@media (max-width: 700px) {
+
+    .logo {
+        width: 85%; /* Resize logo on smaller screens */
+        max-width: 250px; /* Adjust maximum width for smaller screens */
+    }
+
+   .scrolling-text {
+        font-size: 0.8rem
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduce heading size on smaller screens */
+    }
+
+    p {
+        font-size: 0.8rem; /* Reduce paragraph size on smaller screens */
+    }
+
+    input[type="email"] {
+        width: 75%; /* Resize input field on smaller screens */
+        max-width: 200px; /* Adjust maximum width for smaller screens */
+    }
+
+    button {
+        width: 75%; /* Resize button on smaller screens */
+        max-width: 200px; /* Adjust maximum width for smaller screens */
+    }
+
+
+            
+            }

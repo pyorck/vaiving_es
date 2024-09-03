@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaiving</title>
+    <link rel="stylesheet" href="istyles.css">
+    <link rel="icon" href="favicon6.png" type="image/png">
+    <script src="redirect.js"></script>
+</head>
+<body>
+    <div class="top-section">
+    <div class="scrolling-text">You vibe, we vibe. Together, we are <span style="font-weight: bold">Vaiving</span>. Bringing you the future's travel booking platform to 2025. <span style="font-weight: bold">Are you ready for take off?</span> Type your e-mail and subscribe to get news from us really soon!</div>
+</div>
+    <header class="site-header">
+    <img src="logo3.png" alt="Company Logo" class="logo">
+    </header>    
+    <main class="site-main">
+    <h1>Are you ready for take off?</h1>
+    <p style="font-weight: bold;">GRAB YOUR <span style="background-color: #ffe800">-25% DISCOUNT</span> ON LAUNCH:</p>
+    <div class="form-container">
+        <form id="subscribe-form">
+            <input type="email" name="email" placeholder="E-mail address" required>
+            <button type="submit">I'M VAIVING!</button>
+            <div id="form-response" style="margin-top: 10px;"></div>
+        </form>
+        
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#subscribe-form').on('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Serialize form data
+                var formData = $(this).serialize();
+                
+                $.ajax({
+                    url: 'https://formspree.io/f/mpwabnjq', // Replace with your Formspree form endpoint
+                    method: 'POST',
+                    data: formData,
+                    dataType: 'json',
+                    success: function(response) {
+                        $('#form-response').html('<p>Thanks! You will get news from us very soon :)</p>');
+                        $('#subscribe-form')[0].reset(); // Clear the form fields
+                    },
+                    error: function(xhr, status, error) {
+                        $('#form-response').html('<p>Make sure the e-mail is valid.</p>');
+                    }
+                });
+            });
+        });
+    </script>
+    </div>
+    </main>
+    
+    <footer class="site-footer">
+     <a href="https://www.linkedin.com/company/vaiving" target="_blank" class="button-link"><img src="linkedin.png" alt="Icon" style="width: 25px; height: 25px; vertical-align: middle"></a> <a href="https://www.instagram.com/vaivingg" target="_blank" class="button-link2"><img src="instagram.png" alt="Icon" style="width: 25px; height: 25px; vertical-align: middle"></a>
+    </div>
+    </footer>
+    
+</body>  
+</html>
