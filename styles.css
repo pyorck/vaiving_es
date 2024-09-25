@@ -1,0 +1,253 @@
+body {
+    font-family: Geneva, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-size: 1rem;
+}
+
+.container {
+    display: flex; /* Use flexbox for vertical sections */
+    height: 75vh; /* Full height of the viewport */
+    min-height: 60vh;
+}
+
+/* TEXTS */
+
+h1 {
+    color: #000000;
+    font-size: 2.5vw;
+    margin-top: 2vh;
+}
+
+p {
+    color: #101010;
+    font-size: 1.6vw; /* Adjust the size as needed */
+    margin-top: -1vh; /* Spacing over the p */
+    margin-bottom: 2vh; /* Spacing below the p */
+    text-wrap: nowrap;
+}
+
+/* CONTAINERS */
+
+.section {
+    flex: 1; /* Allow sections to expand equally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2vw;
+}
+
+.section-left {
+    background-color: #ffffff; /* White background for left section */
+    color: rgb(0, 0, 0); /* Black text color */
+    text-align: center;
+    font-size: 1.6vw; /* Keep font size as is */
+}
+
+.section-right {
+    background-color: #fdffd4; /* White background for right section */
+    color: rgb(0, 0, 0); /* Black text color */
+    background-image: url('vaivingAI.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.site-footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto; /* Push footer to bottom if content is smaller than the viewport */
+}
+
+.top-section {
+
+    background-color: #000000; /* Header background color (LinkedIn Blue) */
+    color: white;              /* Header text color */
+    padding: 1rem;             /* Padding around header content */
+    text-align: center;        /* Center the text inside the header */
+    height: 10px;
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Position relative for absolute positioning inside */
+
+    }
+
+    .scrolling-text {
+
+        color: white; /* Text color */
+        white-space: nowrap; /* Prevent text from wrapping */
+        position: absolute; /* Absolute positioning for the scrolling effect */
+        animation: scroll-left 20s linear infinite; /* Animation for scrolling */
+                    
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+/* BUTTONS */
+
+.button-container {
+    text-align: center; /* Center the button horizontally */
+    padding: 2vw; /* Add padding above the footer */
+    background-color: #fdffd400; /* Match the background with sections */
+    margin-top: -2vh;
+}
+
+.button-link {
+    display: inline-block;   /* Makes the link behave like a button */
+    padding: 1vh 1vw;      /* Adds space inside the button */
+    background-color: #000000; /* Button background color (LinkedIn Blue) */
+    color: white;            /* Button text color */
+    text-align: center;      /* Centers text inside the button */
+    text-decoration: none;   /* Removes underline from the link */
+    border-radius: 0.5rem;      /* Rounds the corners of the button */
+    font-size: 1vw;         /* Font size */
+    transition: transform 0.05s;
+    margin-bottom: 2vh;
+}
+
+.button-link:hover {
+    background-color: #b5e4ff; /* Changes color on hover */
+    transform: scale(1.2);
+}
+
+.button-link2 {
+    display: inline-block;   /* Makes the link behave like a button */
+    padding: 1vh 1vw;      /* Adds space inside the button */
+    background-color: #000000; /* Button background color (LinkedIn Blue) */
+    color: white;            /* Button text color */
+    text-align: center;      /* Centers text inside the button */
+    text-decoration: none;   /* Removes underline from the link */
+    border-radius: 0.5rem;      /* Rounds the corners of the button */
+    font-size: 1vw;         /* Font size */
+    transition: transform 0.05s;
+    margin-bottom: 2vh;
+}
+
+.button-link2:hover {
+    background-color: #ffc964; /* Changes color on hover */
+    transform: scale(1.2);
+}
+
+button {
+    padding: 0.5vh;
+    border: 3px solid #000000;
+    border-radius: 2rem;
+    background-color: #ffe800;
+    color: #000000;
+    font-size: 2.5vw;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    width: 40vh; /* Make the button the same width as the input */
+    max-width: 40vh; /* Optional: limit max width for consistency */
+    text-wrap: nowrap;
+}
+
+button:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+    color: white;
+    border: 3px solid #ffffff;
+}
+
+/* FORM */
+
+.form-container {
+    background-color: #fdffd400;
+    width: 100%;
+    margin: 0 auto; /* Center container horizontally */
+}
+
+#subscribe-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -4rem;
+    align-items: center; /* Center-aligns form elements horizontally */
+}
+
+input[type="email"] {
+    text-align: center; /* Center-align the text inside the input field */
+    padding: 0.9vh;
+    border: 3px solid #000000;
+    border-radius: 0px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5px;
+    max-width: 31vw; /* Optional: limit max width for better alignment */
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
+}
+
+input[type="email"]:hover {
+    border-color: #686868;
+}
+
+/* LOGO */
+
+.logo {
+    display: block;
+    margin: 2vhpx auto -1.2vh; /* Centers the logo horizontally with some margin */
+    max-width: 45vw;  /* Adjust this value to change the logo size */
+    height: auto;      /* Keeps the aspect ratio */
+    margin-bottom: -12px; /* Spacing below */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for transform & opacity */
+    align-items: center; justify-content: center; text-align: center;
+}
+
+.logo:hover {
+    transform: scale(1.03); /* Slightly enlarges and rotates the logo */
+    opacity: 0.7; /* Slightly fades the logo */
+}
+
+/* Media Queries for Mobile and Tablets */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 3.0vw;
+        text-wrap: nowrap;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .section-left, .section-right {
+        padding: 0.2vw;
+    }
+
+    button, .button-link, .button-link2 {
+        font-size: 3.0vw;
+        max-width: 25vw;
+        padding: 0.5vh;
+        margin-top: 0.5rem;
+    }
+
+    input[type="email"] {
+        text-align: center; /* Center-align the text inside the input field */
+        padding: 0.9vh;
+        border: 3px solid #000000;
+        border-radius: 0px;
+        font-size: 2vw;
+        font-weight: bold;
+        width: 100%;
+        margin-bottom: 5px;
+        max-width: 31vw; /* Optional: limit max width for better alignment */
+        box-sizing: border-box;
+        transition: transform 0.5s ease;
+    }
+
+}
