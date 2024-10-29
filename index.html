@@ -5,49 +5,182 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaiving</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/cards1.css">
+    <link rel="stylesheet" href="css/searcher.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/planecloud.css">
+    <link rel="stylesheet" href="css/formsubmitted.css">
+    <!--<link rel="stylesheet" href="css/pop-ups.css"> To be implemented later-->
+    <link rel="apple-touch-icon" sizes="180x180" href="pics/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
 </head>
+
 <body>
-    <div class="top-section">
-        <div class="scrolling-text">Tu buen rollo + nuestro buen rollo. Juntos, somos <span style="font-weight: bold">Vaiving</span>. Te llevamos al 2025 la plataforma del futuro para reservar tus viajes. <span style="font-weight: bold">¿Estáis listos para el despegue?</span> Escribe tu correo electrónico abajo y subscríbete para tener noticias MUY PRONTO.</div>
-    </div>
-    <div class="container">
-        <div class="section section-left">
-            <img src="logo4.png" alt="Company Logo" class="logo">
-            <h1>¿Estás listo para el despegue?</h1>
-        </div>
-        
-        <div class="section section-right">
-            <p style="font-weight: bold;">
-                <span style="background-color: #ffe800; border: 3px solid black; padding: 5px;">OBTÉN TU -25% DE DESCUENTO DE LANZAMIENTO</span>
-            </p>
-            <div class="form-container">
-                <form id="subscribe-form">
-                    <input type="email" name="email" placeholder="Correo electrónico" required>
-                    <div class="button-container">
-                        <button type="submit">Subscribirse</button>
-                        <div id="form-response" style="margin-top: 40px;"></div>
+    <div id="overlay" class="overlay" style="display: none;"></div>
+    <div class="site-wrapper">
+        <div data-barba="wrapper">
+            <div data-barba="container">
+                </div>
+
+                <div class="section-left">
+                    <p>Tu buen rollo + nuestro buen rollo. Juntos, somos </p><div class="logo"><img src="pics/logo-vv-v2.png" alt="Vaiving Logo"></div>
+                </div>
+                
+                <div class="section-right">
+                    
+                <!-- Marketing head -->
+                <div class="marketinghead">
+                    <p>Reserva tus <span style=font-weight:bold;>Vuelos+Hotel</span> para tu viaje sorpresa <span style=font-weight:bold;>Low-cost</span> o de <span style=font-weight:bold;>Lujo</span> solo en <span style=font-weight:bold;>3 simples pasos:</span></p>
+                </div>
+
+                    <!-- Finder Box with Buttons -->
+                    <div class="finder-box">
+                        <div class="subscribe">OBTÉN TU 25% de DESCUENTO de LANZAMIENTO</div>
+                        <div class="subscribe2">Tendrás ACCESO ANITICPADO a VAIVING</div>
+                        <div class="form-container">
+                            <form id="subscribe-form">
+                                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                                <div class="button-container">
+                                    <button type="submit">ESTOY VAIVING</button>
+                                </div>
+                            </form>
+                            <div id="form-response"></div>
+
+                        <!-- Clouds -->
+                        <div class="clouds-wrapper">
+                            <div class="clouds">
+                                <!-- Front slowest cloud -->
+                                <svg class="cloud big" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve">
+                                    <path d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106 c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529 C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5 S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"></path>
+                                </svg>
+            
+                                <!-- Distant smaller cloud -->
+                                <svg class="cloud distant" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve">
+                                    <path d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106 c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529 C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5 S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"></path>
+                                </svg>
+            
+                                <!-- Small slow cloud -->
+                                <svg class="cloud small" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve">
+                                    <path d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106 c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529 C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5 S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"></path>
+                                </svg>
+            
+                                <!-- Super-slow massive cloud -->
+                                <svg class="cloud massive" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve">
+                                    <path d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106 c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529 C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5 S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"></path>
+                                </svg>
+            
+                                <!-- Medium-sized cloud -->
+                                <svg class="cloud medium" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve">
+                                    <path d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106 c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529 C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5 S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"></path>
+                                </svg>
+            
+                                <!-- Smallest cloud -->
+                                <svg class="cloud smallest" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve">
+                                    <path d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106 c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529 C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5 S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"></path>
+                                </svg>
+            
+                                <!-- Mid-Smallest cloud -->
+                                <svg class="cloud midsmallest" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px" height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve">
+                                    <path d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106 c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529 C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5 S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"></path>
+                                </svg>
+
+                            </div>
+                        </div>
                     </div>
-                </form>
-            </div>
-        </div>
+                </div>
+
+                    <div class="virtualcards-wrapper">
+                        <div class="virtualcards-header">
+                            <p>¿Cómo va a funcionar?</p>
+                        </div>
+                        <div class="virtualcards">
+                            
+                            <!-- First Card -->
+                            <div class="card-container">
+                                <div class="card-container__header" 
+                                    style="background-image: url(pics/1howto.png); 
+                                            background-size: contain; 
+                                            background-position: center; 
+                                            background-repeat: no-repeat;
+                                            scale: 1.2;">
+                                </div>
+                                <div class="card-container__content">
+                                    <span class="title"><span style=font-weight:bold;>Diseña tu viaje</span><br>Desde, Presu, Fechas</span>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <!-- Second Card -->
+                            <div class="card-container">
+                                <div class="card-container__header" 
+                                    style="background-image: url(pics/2howto.png); 
+                                            background-size: contain; 
+                                            background-position: center; 
+                                            background-repeat: no-repeat;
+                                            scale: 1.2;">
+                                </div>
+                                <div class="card-container__content">
+                                    <span class="title"><span style=font-weight:bold;>Rellena tus detalles</span><br>Reservamos todo por ti</span>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <!-- Third Card -->
+                            <div class="card-container">
+                                <div class="card-container__header" 
+                                    style="background-image: url(pics/3howto.png); 
+                                            background-size: contain; 
+                                            background-position: center; 
+                                            background-repeat: no-repeat;
+                                            scale: 1.2;">
+                                </div>
+                                <div class="card-container__content">
+                                    <span class="title"><span style=font-weight:bold;>Paga y Relájate!</span><br>Sorpresa 72h antes</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>               
+                </div> <!-- End section-right -->
+            </div> <!-- End of data-barba container -->
+        </div> <!-- End of data-barba wrapper -->
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <a href="https://www.linkedin.com/company/vaiving" target="_blank" class="button-link">
+                <img src="pics/linkedin.png" alt="LinkedIn Icon" style="width: 25px; height: 25px; vertical-align: middle">
+            </a> 
+            <a href="https://www.instagram.com/vaivingg" target="_blank" class="button-link2">
+                <img src="pics/instagram.png" alt="Instagram Icon" style="width: 25px; height: 25px; vertical-align: middle">
+            </a>
+            <p style="color: rgb(0, 0, 0); font-size: 12px; margin-top: 1px; font-weight: bold;">&copy; 2024 - Vaiving Ltd.</p>
+        </footer>
     </div>
+    
+</body>
 
-    <footer class="site-footer">
-        <a href="https://www.linkedin.com/company/vaiving" target="_blank" class="button-link"><img src="linkedin.png" alt="Icon" style="width: 25px; height: 25px; vertical-align: middle"></a> 
-        <a href="https://www.instagram.com/vaivingg" target="_blank" class="button-link2"><img src="instagram.png" alt="Icon" style="width: 25px; height: 25px; vertical-align: middle"></a>
-        <p style="color: white; font-size: 15px;">&copy; 2024 - Vaiving Ltd.</p>
-    </footer>
-
+    <!-- Dynamic GSAP Transition Handling for index -->
+    
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/airpapi.js"></script>
+    <script src="scripts/popup.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
             $('#subscribe-form').on('submit', function(event) {
                 event.preventDefault(); // Prevent the default form submission
-
+    
                 // Serialize form data
                 var formData = $(this).serialize();
                 
@@ -57,15 +190,18 @@
                     data: formData,
                     dataType: 'json',
                     success: function(response) {
-                        $('#form-response').html('<p style="font-weight: bold;"><span style="background-color: #000000; border: 3px solid white; color: white; padding: 5px;">Gracias :) Tendrás noticias nuestras muy pronto!</span></p>');
+                        $('#form-response').html('<p>Thanks :) You will get news from us very soon!</p>')
+                                          .css('visibility', 'visible'); // Show response message
                         $('#subscribe-form')[0].reset(); // Clear the form fields
                     },
                     error: function(xhr, status, error) {
-                        $('#form-response').html('<p>Asegurate de que el e-mail es correcto.</p>');
+                        $('#form-response').html('<p>Make sure the e-mail is valid.</p>')
+                                          .css('visibility', 'visible'); // Show error message
                     }
                 });
             });
         });
     </script>
-</body>
+    
+
 </html>

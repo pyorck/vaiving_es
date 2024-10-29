@@ -1,253 +1,254 @@
+/* BODY */
+
 body {
-    font-family: Geneva, sans-serif;
+    font-family: "Inter Tight", serif;
     margin: 0;
     padding: 0;
-    background-color: #000000;
-    font-size: 1rem;
+    background-color: #ffffff;
+    max-height: none;
+    overflow-x: hidden;
 }
 
-.container {
-    display: flex; /* Use flexbox for vertical sections */
-    height: 75vh; /* Full height of the viewport */
-    min-height: 60vh;
+html {
+    overflow-x: hidden;
 }
 
-/* TEXTS */
-
-h1 {
-    color: #000000;
-    font-size: 2.5vw;
-    margin-top: 2vh;
-}
-
-p {
-    color: #101010;
-    font-size: 1.6vw; /* Adjust the size as needed */
-    margin-top: -1vh; /* Spacing over the p */
-    margin-bottom: 2vh; /* Spacing below the p */
-    text-wrap: nowrap;
-}
-
-/* CONTAINERS */
-
-.section {
-    flex: 1; /* Allow sections to expand equally */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 2vw;
-}
+/* VAIVING TITLE + LOGO */
 
 .section-left {
-    background-color: #ffffff; /* White background for left section */
-    color: rgb(0, 0, 0); /* Black text color */
-    text-align: center;
-    font-size: 1.6vw; /* Keep font size as is */
+    background-color: rgb(255, 255, 255);  
+    color: rgb(0, 0, 0);       
+    display: flex;              
+    flex-direction: row;     
+    justify-content: center;      /* Center the content horizontally */
+    align-items: center;          /* Center the items vertically */
+    position: fixed;             
+    top: 0;                      /* Stick to the top of the page */
+    width: 100%;                 
+    z-index: 1000;               /* Higher z-index to keep it on top */
+    height: clamp(3rem, 8vh, 6rem); /* Adjust height responsively */
+    white-space: nowrap;          /* Prevent wrapping */
+    box-sizing: border-box;       /* Include padding in width calculation */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Subtle bottom shadow */
 }
 
+.section-left p {
+    margin: 0;
+    display: inline-flex;
+    font-size: clamp(1.9rem, 5vw, 3rem); /* Smaller font size for mobile, larger for desktop */
+    font-family: "Just Another Hand", serif;
+    font-weight: 400;
+    line-height: 1;              /* Ensure consistent vertical alignment */
+    vertical-align: middle;      /* Align text in the middle with logo */
+    margin-left: 1rem;
+    margin-right: -0.5rem;
+}
+
+.logo {
+    display: inline-flex;        /* Keep the logo inline with the text */
+    align-items: center;         /* Center the logo vertically */
+}
+
+.logo img {
+    height: clamp(30px, 5vh, 80px); /* Smaller logo size for mobile, larger for desktop */
+    vertical-align: middle;      /* Align logo vertically with text */
+}
+
+
+
+/* For the MAIN section */
+
 .section-right {
-    background-color: #fdffd4; /* White background for right section */
-    color: rgb(0, 0, 0); /* Black text color */
-    background-image: url('vaivingAI.jfif');
+    background-color: #000000;
+    background-image: url('pics/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    width: 100%;
+    min-height: clamp(90vh, 100vh, 120vh); /* Responsive min-height */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.site-footer {
-    background-color: #000000;
-    color: white;
+.marketinghead {
+    margin-top: 11vh;
+    position: inline-block;
+    margin-bottom: -23vh;
+}
+
+.marketinghead p {
+    margin: 0 auto;
+    width: min(90vw, 40rem); /* Responsive width up to a max */
+    font-size: calc(0.8rem + 1.2vw); /* Dynamically adjust font size */
+    line-height: 1.3; /* Adjust vertical spacing for readability */
+    max-width: 80rem; /* Ensures text wraps within a specific width */
     text-align: center;
-    padding: 1.5rem;
-    margin-top: auto; /* Push footer to bottom if content is smaller than the viewport */
+    font-weight: 400;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5); /* Subtle shadow effect */
+    font-family: "Inter Tight", serif;
+    margin-bottom: 4rem;
+    margin-top: 0.2rem;
 }
 
-.top-section {
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the form elements */
+            width: 100%; 
+        }
 
-    background-color: #000000; /* Header background color (LinkedIn Blue) */
-    color: white;              /* Header text color */
-    padding: 1rem;             /* Padding around header content */
-    text-align: center;        /* Center the text inside the header */
-    height: 10px;
-    display: flex; /* Flexbox layout */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    overflow: hidden; /* Hide any overflow */
-    position: relative; /* Position relative for absolute positioning inside */
+        #subscribe-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the form elements */
+            width: 100%; 
+        }
 
+        input[type="email"] {
+            text-align: center;
+            padding: clamp(0.4rem, 1vw, 0.7rem);
+            border-radius: 15px;
+            font-size: clamp(1.0rem, 1vw + 0.5rem, 1.2rem);
+            width: 100%;
+            max-width: clamp(220px, 40vw, 350px);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            position: relative;
+            z-index: 9999;
+            margin: 0 auto;
+        }
+        .button-container button {
+            color: #000000 !important;
+            background-color: #ffe800 !important;
+            border: 2px solid black !important;
+            font-weight: bold !important;
+            cursor: pointer;
+            border-radius: 15px !important;
+            max-width: clamp(150px, 20vw, 200px) !important; /* Responsive width */
+            padding: clamp(0.3rem, 1vw, 0.6rem) !important; /* Responsive padding */
+            font-size: clamp(0.9rem, 1vw + 0.4rem, 1.1rem) !important; /* Responsive font-size */
+            animation: breatheAnimation 2s ease-in-out infinite;
+        }
+    
+    @keyframes breatheAnimation {
+        0% {
+            transform: scale(1) translateY(0); /* Original size */
+        }
+        85% {
+            transform: scale(1) translateY(0); /* First large expansion */
+        }
+        90% {
+            transform: scale(1.2) translateY(0); /* First quick shrink */
+        }
+        94% {
+            transform: scale(1) translateY(0); /* Second quick expansion */
+        }
+        98% {
+            transform: scale(1.2) translateY(0); /* Second quick expansion */
+        }
+        100% {
+            transform: scale(1) translateY(0); /* Back to original size */
+        }
     }
 
-    .scrolling-text {
+    #form-response {
+        display: flex;
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        font-size: calc(0.6rem + 0.5vw); /* Dynamically adjust font size */
+        font-weight: bold;
+        text-align: center;
+        position: absolute;
+        visibility: hidden; /* Hide by default */
+        bottom: -3vh;
+        background-color: rgba(255, 255, 255, 0.5); /* Ensure proper background color */
+        border-radius: 15px;
+        padding: 0.5rem 1rem; /* Set consistent padding around the text */
+        height: 25px; /* Allow height to adjust based on content */
+        max-height: 50px; /* Optional: limit max height to keep it trimmed */
+        overflow: hidden; /* Prevent overflow if text is too large */
+        scale: 0.95; /* Keep your existing scale */
+    }
+    
+        
+        /* Show #form-response after submission */
+        .show-response #form-response {
+            visibility: visible;
+        }
+        
 
-        color: white; /* Text color */
-        white-space: nowrap; /* Prevent text from wrapping */
-        position: absolute; /* Absolute positioning for the scrolling effect */
-        animation: scroll-left 20s linear infinite; /* Animation for scrolling */
-                    
+        .subscribe {
+            background-color: rgb(255, 255, 255);
+            font-weight: 700;
+            padding: 0.2rem;
+            font-size: calc(0.5rem + 0.9vw);
+            margin-top: 1rem;
         }
 
-        @keyframes scroll-left {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
+        .subscribe2 {
+            background-color: rgb(255, 255, 255);
+            font-weight: 700;
+            padding: 0.2rem;
+            font-size: calc(0.6rem + 0.9vw);
         }
 
-/* BUTTONS */
+/* FOOTER LINKS + VAIVING LTD. */
 
-.button-container {
-    text-align: center; /* Center the button horizontally */
-    padding: 2vw; /* Add padding above the footer */
-    background-color: #fdffd400; /* Match the background with sections */
-    margin-top: -2vh;
-}
+.site-footer {
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    height: 10vh;
+    font-family: "Inter Tight", serif;
+    }
 
+/* Button styles (center aligned) */
 .button-link {
-    display: inline-block;   /* Makes the link behave like a button */
-    padding: 1vh 1vw;      /* Adds space inside the button */
-    background-color: #000000; /* Button background color (LinkedIn Blue) */
-    color: white;            /* Button text color */
-    text-align: center;      /* Centers text inside the button */
-    text-decoration: none;   /* Removes underline from the link */
-    border-radius: 0.5rem;      /* Rounds the corners of the button */
-    font-size: 1vw;         /* Font size */
-    transition: transform 0.05s;
-    margin-bottom: 2vh;
+    display: inline-block;
+    width: 3rem;                   /* Set fixed width to make it square */
+    height: 3rem;                  /* Set fixed height to match width */
+    background-color: #ffffff;
+    color: white;
+    border-radius: 0.75rem;         /* Slightly rounded corners */
+    text-align: center;             /* Center the content */
+    line-height: 3rem;              /* Vertically center text/icon inside */
+    font-size: 1.2rem;              /* Adjust font size to fit */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 0.5rem;
 }
 
 .button-link:hover {
-    background-color: #b5e4ff; /* Changes color on hover */
-    transform: scale(1.2);
+    background-color: #b5e4ff;      /* Hover color */
+    transform: scale(1.05);         /* Slightly increase size on hover */
 }
 
 .button-link2 {
-    display: inline-block;   /* Makes the link behave like a button */
-    padding: 1vh 1vw;      /* Adds space inside the button */
-    background-color: #000000; /* Button background color (LinkedIn Blue) */
-    color: white;            /* Button text color */
-    text-align: center;      /* Centers text inside the button */
-    text-decoration: none;   /* Removes underline from the link */
-    border-radius: 0.5rem;      /* Rounds the corners of the button */
-    font-size: 1vw;         /* Font size */
-    transition: transform 0.05s;
-    margin-bottom: 2vh;
+    display: inline-block;
+    width: 3rem;                   /* Ensure it remains square */
+    height: 3rem;                  /* Ensure it remains square */
+    background-color: #ffffff;
+    color: white;
+    border-radius: 0.75rem;         /* Rounded corners */
+    text-align: center;
+    line-height: 3rem;              /* Vertically center content */
+    font-size: 1.2rem;              /* Ensure proper font sizing */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 0.5rem;
 }
 
 .button-link2:hover {
-    background-color: #ffc964; /* Changes color on hover */
-    transform: scale(1.2);
-}
-
-button {
-    padding: 0.5vh;
-    border: 3px solid #000000;
-    border-radius: 2rem;
-    background-color: #ffe800;
-    color: #000000;
-    font-size: 2.5vw;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.5s ease, transform 0.5s ease;
-    width: 40vh; /* Make the button the same width as the input */
-    max-width: 40vh; /* Optional: limit max width for consistency */
-    text-wrap: nowrap;
-}
-
-button:hover {
-    background-color: #000000;
-    transform: scale(1.1);
-    color: white;
-    border: 3px solid #ffffff;
-}
-
-/* FORM */
-
-.form-container {
-    background-color: #fdffd400;
-    width: 100%;
-    margin: 0 auto; /* Center container horizontally */
-}
-
-#subscribe-form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: -4rem;
-    align-items: center; /* Center-aligns form elements horizontally */
-}
-
-input[type="email"] {
-    text-align: center; /* Center-align the text inside the input field */
-    padding: 0.9vh;
-    border: 3px solid #000000;
-    border-radius: 0px;
-    font-size: 1.5vw;
-    font-weight: bold;
-    width: 100%;
-    margin-bottom: 5px;
-    max-width: 31vw; /* Optional: limit max width for better alignment */
-    box-sizing: border-box;
-    transition: transform 0.5s ease;
-}
-
-input[type="email"]:hover {
-    border-color: #686868;
-}
-
-/* LOGO */
-
-.logo {
-    display: block;
-    margin: 2vhpx auto -1.2vh; /* Centers the logo horizontally with some margin */
-    max-width: 45vw;  /* Adjust this value to change the logo size */
-    height: auto;      /* Keeps the aspect ratio */
-    margin-bottom: -12px; /* Spacing below */
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for transform & opacity */
-    align-items: center; justify-content: center; text-align: center;
-}
-
-.logo:hover {
-    transform: scale(1.03); /* Slightly enlarges and rotates the logo */
-    opacity: 0.7; /* Slightly fades the logo */
-}
-
-/* Media Queries for Mobile and Tablets */
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 3.0vw;
-        text-wrap: nowrap;
-    }
-
-    p {
-        font-size: 2vw;
-    }
-
-    .container {
-        height: auto;
-    }
-
-    .section-left, .section-right {
-        padding: 0.2vw;
-    }
-
-    button, .button-link, .button-link2 {
-        font-size: 3.0vw;
-        max-width: 25vw;
-        padding: 0.5vh;
-        margin-top: 0.5rem;
-    }
-
-    input[type="email"] {
-        text-align: center; /* Center-align the text inside the input field */
-        padding: 0.9vh;
-        border: 3px solid #000000;
-        border-radius: 0px;
-        font-size: 2vw;
-        font-weight: bold;
-        width: 100%;
-        margin-bottom: 5px;
-        max-width: 31vw; /* Optional: limit max width for better alignment */
-        box-sizing: border-box;
-        transition: transform 0.5s ease;
-    }
-
+    background-color: #ffd0a3;      /* Hover color */
+    transform: scale(1.05);         /* Slight scaling on hover */
 }
